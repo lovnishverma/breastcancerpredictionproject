@@ -10,9 +10,9 @@ def weather():
 
 @app.route("/weather",methods=['POST'])
 def page():
-  temp_max=eval(request.form.get("temp_max"))
-  temp_min=eval(request.form.get("temp_min"))
-  wind=eval(request.form.get("wind"))
+  temp_max=eval(request.form.get("n1"))
+  temp_min=eval(request.form.get("n2"))
+  wind=eval(request.form.get("n3"))
   
   url="C:/Users/91980/Downloads/reshavweatherdataset.csv"
   data=pd.read_csv(url, header=None)
@@ -24,7 +24,7 @@ def page():
   model.fit(x,y)
   
   arr=model.predict([[temp_max,temp_min,wind]])
-  return render_template("index.html",data=str(arr[0]))
+  return render_template("index.html",result2=str(arr[0]))
 if __name__ == '__main__':
   app.run()
     
