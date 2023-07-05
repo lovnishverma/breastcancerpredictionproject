@@ -10,9 +10,9 @@ def weather():
 
 @app.route("/weather",methods=['POST'])
 def page():
-  temp_max=eval(request.form.get("n1"))
-  temp_min=eval(request.form.get("n2"))
-  wind=eval(request.form.get("n3"))
+  temp_max=eval(request.form.get("temp_max"))
+  temp_min=eval(request.form.get("temp_min"))
+  wind=eval(request.form.get("wind"))
   
   url="C:/Users/91980/Downloads/reshavweatherdataset.csv"
   data=pd.read_csv(url, header=None)
