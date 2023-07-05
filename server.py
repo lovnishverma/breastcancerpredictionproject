@@ -8,21 +8,26 @@ app=Flask(__name__)
 def weather():
   return render_template("index.html")
 
-@app.route("weather",methods=['post'])
+@app.route("/weather",methods=['POST'])
 def page():
   temp_max=eval(request.form.get("temp_max"))
   temp_min=eval(request.form.get("temp_min"))
   wind=eval(request.form.get("wind"))
   
-  url="C:\Users\91980\Downloads\reshavweatherdataset.csv"
+  url="C:/Users/91980/Downloads/reshavweatherdataset.csv"
   data=pd.read_csv(url, header=None)
   weather=data.values
   x=weather[:,0:3]
   y=weather[:,-1]
   
-  model=DecisionTreeClassifier
+  model=DecisionTreeClassifier()
+  model.fit(x,y)
   
-  
+  arr=model.predict([[temp_max,temp_min,wind]])
+  return render_template("index.html",data=str(arr[0]))
+if __name__ == '__main__':
+  app.run()
+    
   
   
   
