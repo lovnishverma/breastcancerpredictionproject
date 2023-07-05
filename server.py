@@ -14,7 +14,7 @@ def page():
   temp_min=eval(request.form.get("temp_min"))
   wind=eval(request.form.get("wind"))
   
-  url="C:/Users/91980/Downloads/reshavweatherdataset.csv"
+  url=r"C:\Users\91980\Downloads\reshavweatherdataset.csv"
   data=pd.read_csv(url, header=None)
   weather=data.values
   x=weather[:,0:3]
