@@ -24,8 +24,7 @@ def page():
   model.fit(x,y)
   
   arr=model.predict([[temp_max,temp_min,wind]])
-  result=str(arr[0])
-  return render_template("index.html",result2)
+  return render_template("index.html",result=arr[0])
 if __name__ == '__main__':
   app.run()
     
