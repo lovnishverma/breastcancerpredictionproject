@@ -1,65 +1,84 @@
 <html>
   <title>weather predction</title>
   <head> </head>
-   <style> 
-     body{
-background-image: url("https://cdn.glitch.global/0ab61b9d-f232-45f9-aaf3-951ffeacb6df/rain2.jpg?v=1688581279618");
-background-size:100% 100%;
-     }
-     h1{
-       
-     }
-    </style>
+  <style>
+    body {
+      background-image: url("https://cdn.glitch.global/0ab61b9d-f232-45f9-aaf3-951ffeacb6df/rain2.jpg?v=1688581279618");
+      background-size: 100% 100%;
+    }
+    h1 {
+    }
+  </style>
   <body>
     <div align="center" class="main">
-        <h1 style="background-color:#FFFDD0">WHEATHER PREDICTION</h1> <br />
+      <h1 style="background-color: #fffdd0">WHEATHER PREDICTION</h1>
+      <br />
       <form action="/weather" method="POST">
-  <table class="table table-striped trans" align="center">
-    
-    <div class="row">
-    <tr align="center">
-       <div class="col-sm-6">
-         <td><label for="temp_max" class="form-label">temp_max</label></td></div>
-        <div class="col-sm-6">
-          <td><input type="text" name="temp_max" placeholder="maximum temprature" required></td></div>
-    </tr>
-    <tr align="center">
-        <div class="col-sm-6">
-          <td><label for="temp_min" class="form-label">temp_min</label></td></div>
-        <div class="col-sm-6">
-          <td><input type="text" name="temp_min" placeholder="min temp" required></td></div>
-    </tr>
-    <tr align="center">
-        <div class="col-sm-6">
-          <td><label for="wind" class="form-label">wind</label></td></div>
-        <div class="col-sm-6">
-          <td><input type="text" name="wind" placeholder="Enter wind" required></td></div>
-    </tr>
-    
-    
-    <tr>
-    <td colspan="2" align="center">
-      <input type="submit" value="Predict weather">
-      <input type="reset" value="Clear">
-    </td>
-    </tr>
-    </div>
-  </table>
-  
-</form>
+        <table class="table table-striped trans" align="center">
+          <div class="row">
+            <tr align="center">
+              <div class="col-sm-6">
+                <td>
+                  <label for="temp_max" class="form-label">temp_max</label>
+                </td>
+              </div>
+              <div class="col-sm-6">
+                <td>
+                  <input
+                    type="text"
+                    name="temp_max"
+                    placeholder="maximum temprature"
+                    required
+                  />
+                </td>
+              </div>
+            </tr>
+            <tr align="center">
+              <div class="col-sm-6">
+                <td>
+                  <label for="temp_min" class="form-label">temp_min</label>
+                </td>
+              </div>
+              <div class="col-sm-6">
+                <td>
+                  <input
+                    type="text"
+                    name="temp_min"
+                    placeholder="min temp"
+                    required
+                  />
+                </td>
+              </div>
+            </tr>
+            <tr align="center">
+              <div class="col-sm-6">
+                <td><label for="wind" class="form-label">wind</label></td>
+              </div>
+              <div class="col-sm-6">
+                <td>
+                  <input
+                    type="text"
+                    name="wind"
+                    placeholder="Enter wind"
+                    required
+                  />
+                </td>
+              </div>
+            </tr>
 
-  
-  
-  
-      
-      
-      
-      
-      
-        <div class="row">
-            <h2 style="color:#FFFDD0"><em>{{result2}} </em></h2>
-        </div>
+            <tr>
+              <td colspan="2" align="center">
+                <input type="submit" value="Predict weather" />
+                <input type="reset" value="Clear" />
+              </td>
+            </tr>
+          </div>
+        </table>
+      </form>
+
+      <div class="row">
+        <h2 style="color: #fffdd0"><em>{{result2}} </em></h2>
+      </div>
     </div>
-</body>
- 
+  </body>
 </html>

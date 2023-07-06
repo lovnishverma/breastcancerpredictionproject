@@ -8,7 +8,7 @@ app=Flask(__name__)
 def weather():
   return render_template("index.html")
 
-@app.route("/weather",methods=['POST'])
+@app.route("/weather",methods=["POST"])
 def page():
   temp_max=eval(request.form.get("temp_max"))
   temp_min=eval(request.form.get("temp_min"))
