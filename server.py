@@ -14,10 +14,10 @@ def page():
   temp_min=eval(request.form.get("temp_min"))
   wind=eval(request.form.get("wind"))
   
-  url=r"C:\Users\91980\Downloads\reshavweatherdataset.csv"
+  url="weatherd.csv"
   data=pd.read_csv(url, header=None)
   weather=data.values
-  x=weather[:,0:3]
+  x=weather[:,1:4]
   y=weather[:,-1]
   
   model=DecisionTreeClassifier()
