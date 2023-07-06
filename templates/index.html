@@ -13,7 +13,7 @@
     <div align="center" class="main">
       <h1 style="background-color: #fffdd0">WHEATHER PREDICTION</h1>
       <br />
-      <form action="/weather" method="POST">
+      <form action="/weather" method="GET">
         <table class="table table-striped trans" align="center">
           <div class="row">
             <tr align="center">
@@ -45,6 +45,7 @@
                   <input
                     type="text"
                     name="temp_min"
+                         id="temp_min"
                     placeholder="min temp"
                     required
                   />
@@ -60,6 +61,7 @@
                   <input
                     type="text"
                     name="wind"
+                         id="wind"
                     placeholder="Enter wind"
                     required
                   />
