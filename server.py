@@ -1,7 +1,7 @@
 from flask import *
 import numpy as  np
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import 
 app=Flask(__name__)
 
 @app.route('/')
@@ -14,10 +14,10 @@ def page():
   temp_min=eval(request.form.get("temp_min"))
   wind=eval(request.form.get("wind"))
   
-  url="test.csv"
+  url="weatherd.csv"
   data=pd.read_csv(url, header=None)
   weather=data.values
-  x=weather[:,0:3]
+  x=weather[:,1:4]
   y=weather[:,-1]
   
   model=DecisionTreeClassifier()
