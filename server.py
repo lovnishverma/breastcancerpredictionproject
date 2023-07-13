@@ -1,7 +1,7 @@
 from flask import *
 import numpy as  np
 import pandas as pd
-from sklearn.svm import 
+from sklearn.svm import SVC
 app=Flask(__name__)
 
 @app.route('/')
@@ -20,7 +20,7 @@ def page():
   x=weather[:,1:4]
   y=weather[:,-1]
   
-  model=DecisionTreeClassifier()
+  model=SVC()
   model.fit(x,y)
   
   arr=model.predict([[temp_max,temp_min,wind]])
