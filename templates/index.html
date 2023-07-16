@@ -79,9 +79,26 @@
         </table>
       </form>
 
-      <div class="row">
-        <h2 style="color: #fffdd0"><em>{{result}} </em></h2>
-      </div>
+     <div class="row">
+  <h2 style="color: #fffdd0">
+    <em>
+      {% if result == 1 %}
+        Drizzle
+      {% elif result == 2 %}
+        Rain
+      {% elif result == 3 %}
+        Sun
+      {% elif result == 4 %}
+        Snow
+      {% elif result == 5 %}
+        Fog
+      {% else %}
+        Unknown
+      {% endif %}
+    </em>
+  </h2>
+</div>
+
     </div>
   </body>
 </html>
