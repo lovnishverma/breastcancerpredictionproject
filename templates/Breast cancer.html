@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
   <title>Breast Cancer Prediction</title>
   <head> </head>
   <style>
     body {
-      background-image: url("https://cdn.glitch.global/0ab61b9d-f232-45f9-aaf3-951ffeacb6df/rain2.jpg?v=1688581279618");
+      background-image: url("https://media.giphy.com/media/1428XrTMKTv6rC/giphy.gif");
       background-size: 100% 100%;
     }
     h1 {
@@ -204,26 +205,17 @@
         </table>
       </form>
 
-     <div class="row">
+    <div class="row">
   <h2 style="color: #fffdd0">
     <em>
-      {% if result == 1 %}
-        Drizzle
-      {% elif result == 2 %}
-        Rain
-      {% elif result == 3 %}
-        Sun
-      {% elif result == 4 %}
-        Snow
-      {% elif result == 5 %}
-        Fog
-      {% else %}
-        Unknown
+      {% if result == 0 %}
+        Maligant
+      {% else result == 1 %}
+        Bengin
       {% endif %}
     </em>
   </h2>
 </div>
-
     </div>
   </body>
 </html>
