@@ -20,7 +20,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="radius_mean" class="form-label">radius_mean</label>
+                  <label for="radius_mean" class="form-label"
+                    >radius_mean</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -28,7 +30,7 @@
                   <input
                     type="text"
                     name="radius_mean"
-                      id="radius_mean"   
+                    id="radius_mean"
                     placeholder="Radius Mean"
                     required
                   />
@@ -38,7 +40,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="texture_mean" class="form-label">texture_mean</label>
+                  <label for="texture_mean" class="form-label"
+                    >texture_mean</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -46,7 +50,7 @@
                   <input
                     type="text"
                     name="texture_mean"
-                         id="texture_mean"
+                    id="texture_mean"
                     placeholder="Texture Mean"
                     required
                   />
@@ -55,14 +59,18 @@
             </tr>
             <tr align="center">
               <div class="col-sm-6">
-                <td><label for="smoothness_mean" class="form-label">smoothness_mean</label></td>
+                <td>
+                  <label for="smoothness_mean" class="form-label"
+                    >smoothness_mean</label
+                  >
+                </td>
               </div>
               <div class="col-sm-6">
                 <td>
                   <input
                     type="text"
                     name="smoothness_mean"
-                         id="smoothness_mean"
+                    id="smoothness_mean"
                     placeholder="Smoothness Mean"
                     required
                   />
@@ -72,7 +80,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="compactness_mean" class="form-label">compactness_mean</label>
+                  <label for="compactness_mean" class="form-label"
+                    >compactness_mean</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -80,7 +90,7 @@
                   <input
                     type="text"
                     name="compactness_mean"
-                      id="compactness_mean"   
+                    id="compactness_mean"
                     placeholder="Compactness Mean"
                     required
                   />
@@ -90,7 +100,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="symmetry_mean" class="form-label">symmetry_mean</label>
+                  <label for="symmetry_mean" class="form-label"
+                    >symmetry_mean</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -98,7 +110,7 @@
                   <input
                     type="text"
                     name="symmetry_mean"
-                      id="symmetry_mean"   
+                    id="symmetry_mean"
                     placeholder="Symmetry Mean"
                     required
                   />
@@ -116,7 +128,7 @@
                   <input
                     type="text"
                     name="radius_se"
-                      id="radius_se"   
+                    id="radius_se"
                     placeholder="Radius Se"
                     required
                   />
@@ -126,7 +138,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="smoothness_se" class="form-label">smoothness_se</label>
+                  <label for="smoothness_se" class="form-label"
+                    >smoothness_se</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -134,7 +148,7 @@
                   <input
                     type="text"
                     name="smoothness_se"
-                      id="smoothness_se"   
+                    id="smoothness_se"
                     placeholder="Smoothness Se"
                     required
                   />
@@ -144,7 +158,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="compactness_se" class="form-label">compactness_se</label>
+                  <label for="compactness_se" class="form-label"
+                    >compactness_se</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -152,7 +168,7 @@
                   <input
                     type="text"
                     name="compactness_se"
-                      id="compactness_se"   
+                    id="compactness_se"
                     placeholder="Compactness Se"
                     required
                   />
@@ -162,7 +178,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="radius_worst" class="form-label">radius_worst</label>
+                  <label for="radius_worst" class="form-label"
+                    >radius_worst</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -170,7 +188,7 @@
                   <input
                     type="text"
                     name="radius_worst"
-                      id="radius_worst"   
+                    id="radius_worst"
                     placeholder="Radius Worst"
                     required
                   />
@@ -180,7 +198,9 @@
             <tr align="center">
               <div class="col-sm-6">
                 <td>
-                  <label for="texture_worst" class="form-label">texture_worst</label>
+                  <label for="texture_worst" class="form-label"
+                    >texture_worst</label
+                  >
                 </td>
               </div>
               <div class="col-sm-6">
@@ -188,7 +208,7 @@
                   <input
                     type="text"
                     name="texture_worst"
-                      id="texture_worst"   
+                    id="texture_worst"
                     placeholder="Texture Worst"
                     required
                   />
@@ -205,17 +225,14 @@
         </table>
       </form>
 
-    <div class="row">
-  <h2 style="color: #fffdd0">
-    <em>
-      {% if result == 'Malignant' %}
-            Malignant
-          {% else %}
-            Benign
-          {% endif %}
-        </em>
-      </h2>
-    </div>
+      <div class="row">
+        <h2 style="color: #fffdd0">
+          <em>
+            {% if result == 'Malignant' %} Malignant {% else %} Benign {% endif
+            %}
+          </em>
+        </h2>
+      </div>
     </div>
   </body>
 </html>
