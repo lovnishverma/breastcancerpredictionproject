@@ -5,23 +5,23 @@ from sklearn.linear_model import LogisticRegression
 app = Flask(__name__)
 
 @app.route('/')
-def Breast Cancer():
+def breast_cancer():
     return render_template("Breast cancer.html")
 
-@app.route("/breast cancer", methods=["POST"])
-def page():
-    radius_mean = eval(request.form.get("radius_mean"))
-    texture_mean = eval(request.form.get("texture_mean"))
-    smoothness_mean = eval(request.form.get("smoothness_mean"))
-    compactness_mean = eval(request.form.get("compactness_mean"))
-    symmetry_mean = eval(request.form.get("symmetry_mean"))
-    radius_se = eval(request.form.get("radius_se"))
-    smoothness_se = eval(request.form.get("smoothness_se"))
-    compactness_se = eval(request.form.get("compactness_se"))
-    radius_worst = eval(request.form.get("radius_worst"))
-    texture_worst = eval(request.form.get("texture_worst"))
+@app.route("/breast_cancer_prediction", methods=["POST"])
+def predict():
+    radius_mean = float(request.form.get("radius_mean"))
+    texture_mean = float(request.form.get("texture_mean"))
+    smoothness_mean = float(request.form.get("smoothness_mean"))
+    compactness_mean = float(request.form.get("compactness_mean"))
+    symmetry_mean = float(request.form.get("symmetry_mean"))
+    radius_se = float(request.form.get("radius_se"))
+    smoothness_se = float(request.form.get("smoothness_se"))
+    compactness_se = float(request.form.get("compactness_se"))
+    radius_worst = float(request.form.get("radius_worst"))
+    texture_worst = float(request.form.get("texture_worst"))
 
-    url = "New_.csv(1)"
+    url = "New_.csv"  # Remove the "(1)" from the file name if it's not necessary
     data = pd.read_csv(url)
     X = data[['radius_mean', 'texture_mean', 'smoothness_mean', 'compactness_mean', 'symmetry_mean', 'radius_se', 'smoothness_se', 'compactness_se', 'radius_worst', 'texture_worst']]
     y = data['diagnosis']
@@ -29,8 +29,10 @@ def page():
     model = LogisticRegression()
     model.fit(X, y)
 
-    arr = model.predict([[temp_max, temp_min, wind]])
-    return render_template("Breast cancer.html", result=arr[0])
+    arr = model.predict([[radius_mean, texture_mean, smoothness_mean, compactness_mean, symmetry_mean, radius_se, smoothness_se, compactness_se, radius_worst, texture_worst]])
+    result = 'Malignant' if arr[0] == 0 else 'Benign'
+    
+    return render_template("Breast cancer.html", result=result)
 
 if __name__ == '__main__':
     app.run()
