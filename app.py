@@ -21,7 +21,7 @@ def predict():
     radius_worst = float(request.form.get("radius_worst"))
     texture_worst = float(request.form.get("texture_worst"))
 
-    url = "New_.csv"  # Remove the "(1)" from the file name if it's not necessary
+    url = "New_.csv"  
     data = pd.read_csv(url)
     X = data[['radius_mean', 'texture_mean', 'smoothness_mean', 'compactness_mean', 'symmetry_mean', 'radius_se', 'smoothness_se', 'compactness_se', 'radius_worst', 'texture_worst']]
     y = data['diagnosis']
