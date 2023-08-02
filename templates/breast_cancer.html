@@ -1,232 +1,186 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Breast Cancer Prediction</title>
-    <style>
-      body {
-        background-image: url("https://www.vecteezy.com/png/11947508-breast-cancer-awareness-ribbon-isolated-falling-effect-from-all-sides-3d-rendering");
-        background-size: 100% 100%;
-      }
+<head>
+  <title>Breast Cancer Prediction</title>
+  <style>
+    body {
+      background-image: url("https://www.vecteezy.com/png/11947508-breast-cancer-awareness-ribbon-isolated-falling-effect-from-all-sides-3d-rendering");
+      background-size: 100% 100%;
+    }
     h1 {
-        background-color: #fffdd0;
-      }
-    </style>
-  </head>
-  <body>
-    <div align="center" class="main">
-      <h1>BREAST CANCER PREDICTION</h1>
-      <br />
-      <form action="/breast_cancer_prediction" method="POST">
-        <table class="table table-striped trans" align="center">
-          <tr align="center">
-            <td>
-                  <label for="radius_mean" class="form-label">radius_mean</label>
-            </td>
-            <td>
-              <input
-                type="text"
-                name="radius_mean"
-                id="radius_mean"
-                placeholder="Radius Mean"
-                required
-              />
-            </td>
-          </tr>
-          <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="texture_mean" class="form-label"
-                    >texture_mean</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="texture_mean"
-                    id="texture_mean"
-                    placeholder="Texture Mean"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="smoothness_mean" class="form-label"
-                    >smoothness_mean</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="smoothness_mean"
-                    id="smoothness_mean"
-                    placeholder="Smoothness Mean"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="compactness_mean" class="form-label"
-                    >compactness_mean</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="compactness_mean"
-                    id="compactness_mean"
-                    placeholder="Compactness Mean"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="symmetry_mean" class="form-label"
-                    >symmetry_mean</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="symmetry_mean"
-                    id="symmetry_mean"
-                    placeholder="Symmetry Mean"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="radius_se" class="form-label">radius_se</label>
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="radius_se"
-                    id="radius_se"
-                    placeholder="Radius Se"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="smoothness_se" class="form-label"
-                    >smoothness_se</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="smoothness_se"
-                    id="smoothness_se"
-                    placeholder="Smoothness Se"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="compactness_se" class="form-label"
-                    >compactness_se</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="compactness_se"
-                    id="compactness_se"
-                    placeholder="Compactness Se"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="radius_worst" class="form-label"
-                    >radius_worst</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="radius_worst"
-                    id="radius_worst"
-                    placeholder="Radius Worst"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-            <tr align="center">
-              <div class="col-sm-6">
-                <td>
-                  <label for="texture_worst" class="form-label"
-                    >texture_worst</label
-                  >
-                </td>
-              </div>
-              <div class="col-sm-6">
-                <td>
-                  <input
-                    type="text"
-                    name="texture_worst"
-                    id="texture_worst"
-                    placeholder="Texture Worst"
-                    required
-                  />
-                </td>
-              </div>
-            </tr>
-              <tr>
-            <td colspan="2" align="center">
-              <input type="submit" value="Breast Cancer Diagnosis" />
-              <input type="reset" value="Clear" />
-            </td>
-          </tr>
-        </table>
-      </form>
+      background-color: #fffdd0;
+    }
+  </style>
+</head>
+<body>
+  <div align="center" class="main">
+    <h1>BREAST CANCER PREDICTION</h1>
+    <br />
+    <form action="/breast_cancer_prediction" method="POST">
+      <table class="table table-striped trans" align="center">
+        <tr>
+          <td>
+            <label for="radius_mean" class="form-label">radius_mean</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="radius_mean"
+              id="radius_mean"
+              placeholder="Radius Mean"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="texture_mean" class="form-label">texture_mean</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="texture_mean"
+              id="texture_mean"
+              placeholder="Texture Mean"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="smoothness_mean" class="form-label">smoothness_mean</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="smoothness_mean"
+              id="smoothness_mean"
+              placeholder="Smoothness Mean"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="compactness_mean" class="form-label">compactness_mean</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="compactness_mean"
+              id="compactness_mean"
+              placeholder="Compactness Mean"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="symmetry_mean" class="form-label">symmetry_mean</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="symmetry_mean"
+              id="symmetry_mean"
+              placeholder="Symmetry Mean"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="radius_se" class="form-label">radius_se</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="radius_se"
+              id="radius_se"
+              placeholder="Radius Se"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="smoothness_se" class="form-label">smoothness_se</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="smoothness_se"
+              id="smoothness_se"
+              placeholder="Smoothness Se"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="compactness_se" class="form-label">compactness_se</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="compactness_se"
+              id="compactness_se"
+              placeholder="Compactness Se"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="radius_worst" class="form-label">radius_worst</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="radius_worst"
+              id="radius_worst"
+              placeholder="Radius Worst"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="texture_worst" class="form-label">texture_worst</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="texture_worst"
+              id="texture_worst"
+              placeholder="Texture Worst"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="Breast Cancer Diagnosis" />
+            <input type="reset" value="Clear" />
+          </td>
+        </tr>
+      </table>
+    </form>
 
-      <div class="row">
-        <h2 style="color: #fffdd0">
-          <em>
-            {% if result == 0 %} The Breast Cancer is : Malignant {% else %} The
-            Breast cancer is : Benign {% endif %}
-          </em>
-        </h2>
-      </div>
+    <div class="row">
+      <h2 style="color: #fffdd0">
+        <em>
+          {% if result == 0 %}
+            The Breast Cancer is : Malignant
+          {% else %}
+            The Breast cancer is : Benign
+          {% endif %}
+        </em>
+      </h2>
     </div>
-  </body>
+  </div>
+</body>
 </html>
+
+
+
