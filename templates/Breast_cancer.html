@@ -168,16 +168,18 @@
     </form>
 
     <div class="row">
-      <h2 style="color: #fffdd0">
-        <em>
-          {% if result == M %}
-            The Breast Cancer is : Malignant
-          {% else result == B  %}
-            The Breast cancer is : Benign
-          {% elsif == B  %}
-            The Breast cancer is : Benign
-          {% endif %}
-        </em>
+      <h2 style="color: RED">
+     <em>
+  {% if result == 'M' %}
+    The Breast Cancer is: Malignant
+  {% elif result == 'B' %}
+    The Breast Cancer is: Benign
+  {% else %}
+    Unknown
+  {% endif %}
+</em>
+
+
       </h2>
     </div>
   </div>

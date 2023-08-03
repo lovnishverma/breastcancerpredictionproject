@@ -30,7 +30,7 @@ def predict():
     model.fit(X, y)
 
     arr = model.predict([[radius_mean, texture_mean, smoothness_mean, compactness_mean, symmetry_mean, radius_se, smoothness_se, compactness_se, radius_worst, texture_worst]])
-    result = 'Malignant' if arr[0] == 0 else 'Benign'
+    result = arr
     
     return render_template("Breast_cancer.html", result=result)
 
