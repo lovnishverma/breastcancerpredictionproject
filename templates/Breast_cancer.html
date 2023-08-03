@@ -4,9 +4,11 @@
   <title>Breast Cancer Prediction</title>
   <style>
     body {
-      background-image: url("https://media.giphy.com/media/oUeNbcDWvasfnsnnDa/giphy.gif");
-      background-size: 100% 100%;
-    }
+  background-image: url("https://media.giphy.com/media/oUeNbcDWvasfnsnnDa/giphy.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
     h1 {
       background-color: #fffdd0;
     }
@@ -170,6 +172,7 @@
     <div class="row">
       <h2 style="color: RED">
      <em>
+       {% if result %}
   {% if result == 'M' %}
     The Breast Cancer is: Malignant
   {% elif result == 'B' %}
