@@ -172,15 +172,17 @@
     <div class="row">
       <h2 style="color: RED">
      <em>
-       {% if result %}
-  {% if result == 'M' %}
-    The Breast Cancer is: Malignant
-  {% elif result == 'B' %}
-    The Breast Cancer is: Benign
-  {% else %}
-    Unknown
+  {% if result %}
+    {% if result == 'M' %}
+      The Breast Cancer is: Malignant
+    {% elif result == 'B' %}
+      The Breast Cancer is: Benign
+    {% else %}
+      Unknown
+    {% endif %}
   {% endif %}
 </em>
+
 
 
       </h2>
