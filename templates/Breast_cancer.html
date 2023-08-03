@@ -16,7 +16,7 @@
   <div align="center" class="main">
     <h1>BREAST CANCER PREDICTION</h1>
     <br />
-    <form action="/breast_cancer_prediction" method="POST">
+    <form action="/prediction" method="POST">
       <table class="table table-striped trans" align="center">
         <tr>
           <td>
@@ -160,7 +160,7 @@
         </tr>
         <tr>
           <td colspan="2" align="center">
-            <input type="submit" value="Breast Cancer Diagnosis" />
+            <input type="submit" value="Breast Cancer Diagnosis">
             <input type="reset" value="Clear" />
           </td>
         </tr>
@@ -170,9 +170,11 @@
     <div class="row">
       <h2 style="color: #fffdd0">
         <em>
-          {% if result == 0 %}
+          {% if result == M %}
             The Breast Cancer is : Malignant
-          {% else %}
+          {% else result == B  %}
+            The Breast cancer is : Benign
+          {% elsif == B  %}
             The Breast cancer is : Benign
           {% endif %}
         </em>

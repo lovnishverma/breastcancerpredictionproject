@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def breast_cancer():
-    return render_template("Breast cancer.html")
+    return render_template("Breast_cancer.html")
 
-@app.route("/breast_cancer_prediction", methods=["POST"])
+@app.route("/prediction", methods=["POST"])
 def predict():
     radius_mean = float(request.form.get("radius_mean"))
     texture_mean = float(request.form.get("texture_mean"))
@@ -21,7 +21,7 @@ def predict():
     radius_worst = float(request.form.get("radius_worst"))
     texture_worst = float(request.form.get("texture_worst"))
 
-    url = "New_.csv"  
+    url = "bdata.csv"  
     data = pd.read_csv(url)
     X = data[['radius_mean', 'texture_mean', 'smoothness_mean', 'compactness_mean', 'symmetry_mean', 'radius_se', 'smoothness_se', 'compactness_se', 'radius_worst', 'texture_worst']]
     y = data['diagnosis']
@@ -32,7 +32,7 @@ def predict():
     arr = model.predict([[radius_mean, texture_mean, smoothness_mean, compactness_mean, symmetry_mean, radius_se, smoothness_se, compactness_se, radius_worst, texture_worst]])
     result = 'Malignant' if arr[0] == 0 else 'Benign'
     
-    return render_template("Breast cancer.html", result=result)
+    return render_template("Breast_cancer.html", result=result)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
